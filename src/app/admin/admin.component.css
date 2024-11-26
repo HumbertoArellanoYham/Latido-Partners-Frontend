@@ -1,0 +1,18 @@
+/* roles */
+.card-example{
+    width: 60%;
+    align-items: center;
+    padding: 10%;
+}
+
+.ingresar {
+    margin-top: 15px;
+}
+
+.contenedor-items {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}

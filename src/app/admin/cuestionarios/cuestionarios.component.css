@@ -1,0 +1,17 @@
+.card-content {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-cuestionarios{
+    margin: 20px;
+}
+
+.contenedor-items {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

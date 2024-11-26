@@ -1,0 +1,24 @@
+.lista-nombre {
+    width: 100%;
+}
+
+.cuestionarioanswer-resultados{
+    margin-top: 20px;
+}
+
+.name-cuestionarios{
+    margin: 5px;
+}
+
+.radios-all {
+    accent-color: green;
+}
+
+.contenedor-items {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

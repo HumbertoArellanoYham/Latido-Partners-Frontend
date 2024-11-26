@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col contenedor-items">
+
+            <mat-tab-group class="cuestionarioanswer-resultados">
+
+                <mat-tab label="Cuestionarios"> 
+    
+                    <mat-nav-list role="#names" class="">
+    
+                    @for(name of nombreCuestionarios; track name){
+                        <mat-card appearance="outlined" class="name-cuestionarios ">
+                            <a mat-list-item role="listitem">{{name}}
+                                <input class="radios-all" type="radio" id="{{name}}">
+                            </a>
+                        </mat-card>
+                    }
+                    </mat-nav-list>
+    
+                </mat-tab>
+    
+                <mat-tab label="Resultados"> 
+                    Content 2 
+                </mat-tab>
+    
+            </mat-tab-group>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col contenedor-items">
+            <div class="agregar-cuestionario">
+                <div class="example-flex-container">
+                    <div class="example-button-container">
+                    <button mat-fab extended (click)="goNuevoCuestionario()">
+                        <mat-icon>add_circle</mat-icon>
+                        Nuevo Cuestionario
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

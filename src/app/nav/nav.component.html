@@ -1,0 +1,31 @@
+<mat-toolbar>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+
+        <button mat-menu-item (click)="goHome()">
+          <mat-icon>home</mat-icon>
+          <span>Latido Partners</span>
+        </button>
+
+        <button mat-menu-item (click)="goAdmin()">
+          <mat-icon>manage accounts</mat-icon>
+          <span>Admin</span>
+        </button>
+
+        <button mat-menu-item (click)="goPartners()">
+          <mat-icon>groups</mat-icon>
+          <span>Partners</span>
+        </button>
+
+      </mat-menu>
+
+    <span>Latido Partners</span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+
+</mat-toolbar>

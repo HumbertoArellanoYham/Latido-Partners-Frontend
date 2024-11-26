@@ -1,0 +1,23 @@
+.content-name {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-cuestionario {
+    margin-right: 5px;
+}
+
+.activo-input {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.save-botton {
+    margin-top: 20px;
+}
+.botonsave {
+    background-color: greenyellow;
+    color: black;
+}
