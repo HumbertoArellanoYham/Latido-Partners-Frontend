@@ -1,5 +1,8 @@
 # Latido Partners 
+## Aplicación de autoevaluación de trabajadores mediante cuestionarios 
+
 ## Responsive Design: principalmente utilizada para el entorno movil adaptable para cualquier tipo de pantalla
+
 ## Technologias
 ## Front end
   * Angular 17
