@@ -1,28 +1,36 @@
-# LatidoPartners
+# Latido Partners 
+## Responsive Design: principalmente utiliza para el entorno movil adaptable para cualquier tipo de pantalla
+## Technologias
+## Front end
+  * Angular 17
+  * Angular Material Design
+  * TypeScript
+  * Bootstrap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+## Back end
+  * Java 17
+  * Spring boot
 
-## Development server
+## Base de datos 
+  * PostGreSQL
+    
+## ---------------------------------------------------------------------------------------------------------------------------------------------
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Application Views
 
-## Code scaffolding
+<img width="214" alt="Screen Shot 2024-11-25 at 18 31 47" src="https://github.com/user-attachments/assets/e403dbe3-8f20-4101-bb7f-4bfbb2c200a7">
+    
+<img width="214" alt="Screen Shot 2024-11-25 at 18 32 02" src="https://github.com/user-attachments/assets/449fc3a2-767d-48cd-b5f4-6da49a28c068">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+<img width="214" alt="Screen Shot 2024-11-25 at 18 32 12" src="https://github.com/user-attachments/assets/a7759c0f-f272-4d69-8db1-d224adadfbbf">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<img width="214" alt="Screen Shot 2024-11-25 at 18 32 24" src="https://github.com/user-attachments/assets/62c16148-5fa6-4dc1-8c75-4d56ea7dba35">
 
-## Running unit tests
+<img width="214" alt="Screen Shot 2024-11-25 at 18 32 42" src="https://github.com/user-attachments/assets/d80cc938-f87f-4af0-9bfb-11a8b00b51f6">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ---------------------------------------------------------------------------------------------------------------------------------------------
 
-## Running end-to-end tests
+# Data base model view
+![WhatsApp Image 2024-11-21 at 20 10 22](https://github.com/user-attachments/assets/4004d6f7-63f5-434a-94ad-5f8811fd1281)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Latido-Partners-Frontend
