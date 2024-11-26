@@ -1,5 +1,5 @@
 # Latido Partners 
-## Responsive Design: principalmente utiliza para el entorno movil adaptable para cualquier tipo de pantalla
+## Responsive Design: principalmente utilizada para el entorno movil adaptable para cualquier tipo de pantalla
 ## Technologias
 ## Front end
   * Angular 17
