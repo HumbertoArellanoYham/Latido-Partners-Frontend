@@ -16,8 +16,6 @@
 
 ## Base de datos 
   * PostGreSQL
-    
-## ----------------------------------------------------------------------------------------------------------------
 
 # Application Views
 
@@ -34,8 +32,6 @@
 
 <img width="214" alt="Screen Shot 2024-11-25 at 18 33 03" src="https://github.com/user-attachments/assets/b995a99c-4eae-4c21-bcb9-5638082b70f4">
 
-
-## -----------------------------------------------------------------------------------------------------------------
 
 # Data base model view
 ![WhatsApp Image 2024-11-21 at 20 10 22](https://github.com/user-attachments/assets/4004d6f7-63f5-434a-94ad-5f8811fd1281)
