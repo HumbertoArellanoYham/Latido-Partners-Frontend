@@ -8,18 +8,32 @@
                 <h4 class="">Administrador</h4>
                 <img src="../../assets/images/latidologo.ico" alt="" width="100px" height="100px">
 
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Administrador">
-                    <label for="floatingInput">Usuario</label>
-                  </div>
-                  <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                  </div> 
-                  <div>
-                    <button class="ingresar" (click)="goAdminPanel()" mat-raised-button color="primary">Ingresar</button>
+              <form [formGroup]="profileForm">
+
+                <mat-form-field appearance="outline" class="user-input">
+                  <mat-label>Ingresa el usuario</mat-label>
+                  <input matInput placeholder="Usuario" type="text"  formControlName="usuario">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="clave-input">
+                  <mat-label>Ingresa la contraseña</mat-label>
+                  <input matInput formControlName="clave"  [type]="hide() ? 'password' : 'text'" />
+                  <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="clickEvent($event)"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide()"
+                  >
+                    <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+
+                  <div class="form-ingresar">
+                    <button class="ingresar" (click)="login()" mat-raised-button color="primary" type="button">Ingresar</button>
                   </div>
 
+            </form>
             </mat-card>
       </div>
     </div>

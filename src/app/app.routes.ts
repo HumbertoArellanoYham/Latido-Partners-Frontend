@@ -11,6 +11,7 @@ import { DetallesresultadosComponent } from './admin/detallesresultados/detalles
 // Import for partners
 import { PartnersComponent } from './partners/partners.component';
 import { CuestionarioanswerComponent } from './partners/cuestionarioanswer/cuestionarioanswer.component';
+import { ViewComponent } from './view/view.component';
 
 export const routes: Routes = [
     // Routing for admin 
@@ -20,7 +21,10 @@ export const routes: Routes = [
     { path: 'nuevocuestionario', component: NuevocuestionarioComponent },
     { path: 'listaresultados', component: ListaresultadosComponent },
     { path: 'detallesresultados', component: DetallesresultadosComponent },
-    { path: '', pathMatch: 'full', redirectTo: '/admin' },
+
+    // Main view
+    { path: 'main', component: ViewComponent },
+    { path: '', pathMatch: 'full', redirectTo: '/main' },
 
     // Routing for partners
     { path: 'partners', component: PartnersComponent},

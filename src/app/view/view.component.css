@@ -1,0 +1,19 @@
+.tabs-table { 
+    margin-top: 20px;
+}
+
+.title { 
+    text-align: center;
+}
+
+.botoncuestionarios{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.task {
+    margin: 5%;
+}
