@@ -21,7 +21,15 @@
                 </mat-tab>
     
                 <mat-tab label="Resultados"> 
-                    Content 2 
+                    <mat-nav-list role="#resultado" class="">
+    
+                        @for(item of cuestionarioResultados; track item){
+                            <mat-card appearance="outlined" class="name-cuestionarios ">
+                                <a [routerLink]="['/detallesresultados']" routerLinkActive="router-link-active"  mat-list-item role="listitem">{{item.name}} {{item.fecha}}
+                                </a>
+                            </mat-card>
+                        }
+                        </mat-nav-list> 
                 </mat-tab>
     
             </mat-tab-group>

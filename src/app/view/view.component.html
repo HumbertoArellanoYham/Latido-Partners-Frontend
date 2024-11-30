@@ -1,0 +1,50 @@
+<img src="../../assets/images/cafe-image1.jpg" class="img-fluid" alt="Latido Cafe">
+
+
+<div class="container tabs-table">
+    <div class="row">
+        <div class="col title">
+            <mat-divider class="m-2"></mat-divider>
+
+            <h4>Que es Latido Partners?</h4>
+
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title> Cuestionarios </mat-panel-title>
+                    <mat-panel-description>
+                        Como funciona?
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Latido Partners es una applicacion para calificar los empleados mediante cuestionarios
+                    para evaluar el resultado del trabajo realizado.
+                    <p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col tabs-table botoncuestionarios">
+            <div class="card" style="width: 18rem;">
+                <img src="../../assets/images/5H6A3260.jpg" class="card-img-top" alt="..." height="200px">
+                <!-- <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div> -->
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col tabs-table botoncuestionarios">
+
+
+            <div class="example-button-container task">
+                <button (click)="goAdmin()" mat-fab extended>
+                  <mat-icon>task</mat-icon>
+                    Ir a cuestionarios
+                </button>
+              </div>
+        </div>
+    </div>
+</div>

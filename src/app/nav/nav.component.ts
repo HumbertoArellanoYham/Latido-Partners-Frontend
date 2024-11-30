@@ -21,7 +21,7 @@ export class NavComponent {
 
   // Routing for multiples views
   goHome(){
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/main']);
   }
 
   goAdmin(){
