@@ -34,7 +34,7 @@ import  {Administrador}  from '../core/interfaces/administrador';
   standalone: true,
   imports: [MatGridListModule, MatCardModule, MatFormFieldModule, MatButtonModule,
     FormsModule, ReactiveFormsModule, CommonModule, HttpClientModule, MatIconModule,
-    MatInputModule
+    MatInputModule 
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './admin.component.html',
@@ -47,7 +47,6 @@ export class AdminComponent {
     usuario: ['', Validators.required],
     clave: ['', Validators.required]
   }); 
-
 
   constructor(private router: Router, private adminService: AdministradorServiceService){}
 

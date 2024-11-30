@@ -21,4 +21,11 @@
     align-items: center;
 }
 
+@media (width >= 750px){
+    .agregar-cuestionario {
+        margin-bottom: 10px;
+    }
+}
+
+
 

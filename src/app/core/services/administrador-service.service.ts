@@ -13,7 +13,6 @@ export class AdministradorServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
-
   getAdministradorLoginValid(usuario: string, clave: string): Observable<Administrador> {
     return this.httpClient.get<Administrador>(`${this.url}/validar-login/${usuario}/${clave}`);
   }
