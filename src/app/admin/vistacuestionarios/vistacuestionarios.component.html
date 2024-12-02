@@ -11,9 +11,15 @@
     
                     @for(name of nombreCuestionarios; track name){
                         <mat-card appearance="outlined" class="name-cuestionarios ">
-                            <a mat-list-item role="listitem">{{name}}
-                                <input class="radios-all" type="radio" id="{{name}}">
+                            @if (name.activo === true) {
+                            <a mat-list-item role="listitem">{{name.nombre}}
+                                <input class="radios-all" type="radio" id="{{name}}" checked>
                             </a>
+                            } @else {
+                                <a mat-list-item role="listitem">{{name.nombre}}
+                                    <input class="radios-all" type="radio" id="{{name}}">
+                                </a>
+                            }
                         </mat-card>
                     }
                     </mat-nav-list>

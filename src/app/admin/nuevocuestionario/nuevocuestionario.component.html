@@ -1,18 +1,19 @@
 <div class="container text-center">
     <!-- Content here -->
-     <div class="row align-items-start">
+     <div class="row align-items-start ">
+
+        <form [formGroup]="cuestionarioForm" class="form-cuestionario">
 
         <div class="col content-name">
                 <mat-card-content> 
                     <label class="label-cuestionario">Cuestionario: </label>
                     <mat-form-field appearance="outline">
-                    <input type="text" matInput placeholder="Ingresa el nombre" value="" required>
+                    <input type="text" matInput placeholder="Ingresa el nombre" value="" required formControlName="nombre">
                     </mat-form-field>
                 </mat-card-content>
         </div>
         
         <div class="col content-name">
-            <form>
               <mat-accordion class="example-headers-align" multi>
 
                 <mat-expansion-panel>
@@ -29,7 +30,7 @@
               
                   <mat-form-field appearance="outline">
                     <mat-label>Escribe: </mat-label>
-                    <input matInput type="text"/>
+                    <input matInput type="text" formControlName="pregunta1"/>
                   </mat-form-field>
               
                 </mat-expansion-panel>
@@ -54,7 +55,7 @@
               
                   <mat-form-field appearance="outline">
                     <mat-label>Escribe: </mat-label>
-                    <input matInput type="text"/>
+                    <input matInput type="text" formControlName="pregunta2"/>
                   </mat-form-field>
               
                 </mat-expansion-panel>
@@ -79,7 +80,7 @@
                 
                     <mat-form-field appearance="outline">
                       <mat-label>Escribe: </mat-label>
-                      <input matInput type="text"/>
+                      <input matInput type="text" formControlName="pregunta3"/>
                     </mat-form-field>
                 
                   </mat-expansion-panel>
@@ -104,7 +105,7 @@
                 
                     <mat-form-field appearance="outline">
                       <mat-label>Escribe: </mat-label>
-                      <input matInput type="text"/>
+                      <input matInput type="text" formControlName="pregunta4"/>
                     </mat-form-field>
                 
                   </mat-expansion-panel>
@@ -129,7 +130,7 @@
                 
                     <mat-form-field appearance="outline">
                       <mat-label>Escribe: </mat-label>
-                      <input matInput type="text"/>
+                      <input matInput type="text" formControlName="pregunta5"/>
                     </mat-form-field>
                 
                   </mat-expansion-panel>
@@ -154,26 +155,25 @@
                 
                     <mat-form-field appearance="outline">
                       <mat-label>Escribe: </mat-label>
-                      <input matInput type="text"/>
+                      <input matInput type="text" formControlName="pregunta6"/>
                     </mat-form-field>
                 
                   </mat-expansion-panel>
   
                 </mat-accordion>
-            </form>
         </div>
 
         <div class="row">
             <div class="col activo-input">
                 <div>
-                    <label>Activo</label>
-                    <mat-radio-group>
-                      <mat-radio-button value="false"></mat-radio-button>
-                    </mat-radio-group>
+                  <mat-radio-group formControlName="activo">
+                    <mat-radio-button value="true">Activo</mat-radio-button>
+                    <mat-radio-button value="false">Inactivo</mat-radio-button>
+                  </mat-radio-group>
                   </div>
             </div>
         </div>
-
+  </form>
 
         <div class="row">
             <div class="col save-botton">
