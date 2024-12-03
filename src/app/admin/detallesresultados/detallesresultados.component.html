@@ -1,1 +1,24 @@
-<p>detallesresultados works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col ">
+            <div class="reporte">
+            <mat-card appearance="outlined" class="cardreporte">
+
+            <h3>Cuestionario: {{result.cuestionario?.nombre}}</h3>
+            <mat-divider class="separator"></mat-divider>
+
+            <p>Colaborador: {{result.partner?.nombre}}</p>
+            <p>Fecha: {{result.fecha}}</p>
+            <p>Resultado final: {{result.calificacion}}</p>
+
+            <mat-divider class="separator"></mat-divider>
+
+            <h4>Preguntas Realizadas</h4>
+            <div *ngFor="let item of result.cuestionario?.preguntasList">
+                <br> * {{item.preguntaDescription}}
+            </div>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

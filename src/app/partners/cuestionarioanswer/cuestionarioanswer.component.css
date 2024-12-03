@@ -14,6 +14,15 @@
   }
 
 .boton-enviar-respuesta {
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
+}
+
+.expansion {
+  margin-bottom: 10px;
+}
+
+.enviar {
+  margin-bottom: 30px;
+  text-align: center;
 }

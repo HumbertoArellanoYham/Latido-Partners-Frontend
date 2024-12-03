@@ -31,7 +31,7 @@
     
                         @for(item of cuestionarioResultados; track item){
                             <mat-card appearance="outlined" class="name-cuestionarios ">
-                                <a [routerLink]="['/detallesresultados']" routerLinkActive="router-link-active"  mat-list-item role="listitem">{{item.name}} {{item.fecha}}
+                                <a [routerLink]="['/vistacuestionarios', item.idRespuesta]" routerLinkActive="router-link-active"  mat-list-item role="listitem">{{item.cuestionario?.nombre}} {{item.fecha}}
                                 </a>
                             </mat-card>
                         }

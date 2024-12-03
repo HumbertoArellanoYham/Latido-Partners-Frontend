@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 
 // Imports for material design
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -13,14 +13,11 @@ import {MatRadioModule} from '@angular/material/radio';
 
 // Interfaces
 import {Cuestionario} from '../../core/interfaces/cuestionario';
+import {Resultado} from '../../core/interfaces/resultado';
 
 //Servicio
 import {CuestionarioServiceService} from '../../core/services/cuestionario-service.service';
-
-export interface resultado {
-  name: string;
-  fecha: string;
-}
+import {ResultadoServiceService} from '../../core/services/resultado-service.service';
 
 @Component({
   selector: 'app-vistacuestionarios',
@@ -32,13 +29,13 @@ export interface resultado {
 })
 export class VistacuestionariosComponent implements OnInit {
   nombreCuestionarios: Cuestionario[] = [];
-  cuestionarioResultados: resultado[] = [
-    { name: "Servicio al cliente", fecha: "2024-11-29" },
-    { name: "Drive", fecha: "2024-11-30" }
-  ];
+  cuestionarioResultados: Resultado[] = [];
+  detailsResult!: Resultado;
   
   constructor(private router: Router,
-    private cuestionarioService: CuestionarioServiceService
+    private cuestionarioService: CuestionarioServiceService,
+    private resultadoService: ResultadoServiceService,
+    private activatedRoute: ActivatedRoute
   ){}
 
   //Cuando el componente carga inicialmente 
@@ -47,7 +44,11 @@ export class VistacuestionariosComponent implements OnInit {
     this.cuestionarioService.obtenerTodosLosCuestionarios().subscribe((data) =>{
       this.nombreCuestionarios = data
     });
-    
+
+    this.resultadoService.obtenerTodosLosResultados().subscribe((data) => {
+      this.cuestionarioResultados = data
+    })
+
   }
 
   // Routing
