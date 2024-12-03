@@ -10,9 +10,12 @@
   * TypeScript
   * Bootstrap
 
-## Back end
+## Back end - Lenguajes - Herramientas - Buenas practicas
   * Java 17
   * Spring boot
+  * Postman
+  * Clean Code
+  * Manejo de Errores
 
 ## Base de datos 
   * PostGreSQL
