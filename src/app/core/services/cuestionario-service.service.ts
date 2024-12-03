@@ -21,6 +21,10 @@ export class CuestionarioServiceService {
     return this.httpClient.get<Cuestionario[]>(`${this.url}/all-cuestionarios`);
   }
 
+  obtenerTodosLosCuestionariosActivos(): Observable<Cuestionario[]> {
+    return this.httpClient.get<Cuestionario[]>(`${this.url}/cuestionarios-activos`);
+  }
+
   agregarCuestionario(cuestionario: Cuestionario): Observable<Cuestionario> {
     return this.httpClient.post<Cuestionario>(`${this.url}`, cuestionario);
   }

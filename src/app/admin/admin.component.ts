@@ -50,13 +50,13 @@ export class AdminComponent {
 
   constructor(private router: Router, private adminService: AdministradorServiceService){}
 
-
   admin: Administrador = {
     idAdmin: 0,
     usuario: '',
     clave: '',
     nombre: ''
   };
+
 
 
   login() {

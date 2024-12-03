@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Router, RouterLink } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 
 // Imports for material design
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -12,10 +11,13 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatRadioModule} from '@angular/material/radio';
 
-export interface resultado {
-  name: string;
-  fecha: string;
-}
+// Interfaces
+import {Cuestionario} from '../../core/interfaces/cuestionario';
+import {Resultado} from '../../core/interfaces/resultado';
+
+//Servicio
+import {CuestionarioServiceService} from '../../core/services/cuestionario-service.service';
+import {ResultadoServiceService} from '../../core/services/resultado-service.service';
 
 @Component({
   selector: 'app-vistacuestionarios',
@@ -25,14 +27,29 @@ export interface resultado {
   templateUrl: './vistacuestionarios.component.html',
   styleUrl: './vistacuestionarios.component.css'
 })
-export class VistacuestionariosComponent {
-  nombreCuestionarios: string[] = ['Caja', 'Pedidos', 'Atencion a cliente', 'Drive', 'Limpieza', 'Decoracion'];
-  cuestionarioResultados: resultado[] = [
-    { name: "Servicio al cliente", fecha: "2024-11-29" },
-    { name: "Drive", fecha: "2024-11-30" }
-  ];
+export class VistacuestionariosComponent implements OnInit {
+  nombreCuestionarios: Cuestionario[] = [];
+  cuestionarioResultados: Resultado[] = [];
+  detailsResult!: Resultado;
   
-  constructor(private router: Router){}
+  constructor(private router: Router,
+    private cuestionarioService: CuestionarioServiceService,
+    private resultadoService: ResultadoServiceService,
+    private activatedRoute: ActivatedRoute
+  ){}
+
+  //Cuando el componente carga inicialmente 
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    this.cuestionarioService.obtenerTodosLosCuestionarios().subscribe((data) =>{
+      this.nombreCuestionarios = data
+    });
+
+    this.resultadoService.obtenerTodosLosResultados().subscribe((data) => {
+      this.cuestionarioResultados = data
+    })
+
+  }
 
   // Routing
   goNuevoCuestionario(){

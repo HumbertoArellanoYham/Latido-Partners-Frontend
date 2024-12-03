@@ -1,3 +1,5 @@
+import {Resultado} from './resultado';
+
 export interface Partners {
     idPartners?: number;
     usuario: string;

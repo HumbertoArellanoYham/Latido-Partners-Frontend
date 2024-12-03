@@ -18,6 +18,10 @@ export const routes: Routes = [
     { path: 'admin', component: AdminComponent},
     { path: 'cuestionarios', component: CuestionariosComponent },
     { path: 'vistacuestionarios', component: VistacuestionariosComponent },
+
+    // Routing con parametros
+    { path: 'vistacuestionarios/:id', component: DetallesresultadosComponent },
+
     { path: 'nuevocuestionario', component: NuevocuestionarioComponent },
     { path: 'listaresultados', component: ListaresultadosComponent },
     { path: 'detallesresultados', component: DetallesresultadosComponent },

@@ -11,7 +11,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, MatGridListModule, FooterComponent, HttpClientModule, MatInputModule],
+  imports: [RouterOutlet, NavComponent, MatGridListModule, HttpClientModule, MatInputModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

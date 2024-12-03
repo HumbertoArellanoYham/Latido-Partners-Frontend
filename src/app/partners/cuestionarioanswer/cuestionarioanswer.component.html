@@ -1,54 +1,68 @@
 <div class="container">
     <div class="row rowclass">
-
-        <div class="col">
-            
-            <mat-card appearance="outlined" class="p-3">
-
-           <Form>
-                <!-- Contestar cuestionario activo -->
-                <div class="partners-select">
-                    <mat-expansion-panel hideToggle>
-                        <mat-expansion-panel-header >
-                          <mat-panel-title> Angel </mat-panel-title>
-                          <mat-panel-description>
-                            Cargo a calificar: Servicio a cliente
-                            <mat-icon class="icon">task</mat-icon>
-                          </mat-panel-description>
-                        </mat-expansion-panel-header>
-                        
-                        <div class="inlineradio">
-                            <label id="">Pregunta 1: Cumplio con todos los requisitos?</label>
-                            <br>
-                            <mat-radio-group class="example-radio-group" aria-label="Select an option" >
-                                <mat-radio-button class="example-radio-button" value="1" color="primary">Malo</mat-radio-button>
-                                <mat-radio-button class="example-radio-button" value="2">Regular</mat-radio-button>
-                                <mat-radio-button class="example-radio-button" value="3">Bueno</mat-radio-button>
-                                <mat-radio-button class="example-radio-button" value="4">Muy bueno</mat-radio-button>
-                                <mat-radio-button class="example-radio-button" value="5">Excelente</mat-radio-button>
-                              </mat-radio-group>
-                          </div>
-
-                        <mat-divider></mat-divider>
-                       
-                      </mat-expansion-panel>
+      <div class="col">
+        <form [formGroup]="calificarCuestionario">
+          <mat-card appearance="outlined" class="p-3">
+            <!-- Contestar cuestionario activo -->
+            <div class="partners-select">
+              <!-- Repite el mat-expansion-panel para cada partner -->
+              <mat-expansion-panel *ngFor="let partner of partnersInLatido; let i = index" class="expansion">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>{{ partner.nombre }}</mat-panel-title>
+                  <mat-panel-description>
+                    {{nombreCuestionarios}}
+                    <mat-icon class="icon">task</mat-icon>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+  
+                <div class="inlineradio">
+                  <!-- Aquí mostramos el cuestionario para cada partner -->
+                  <div *ngFor="let item of cuestionarioPreguntas">
+                    <div *ngFor="let pregunta of item.preguntasList; let j = index">
+                      <!-- Mostrar número de pregunta -->
+                      <label>{{ i + 1 }}.{{ j + 1 }} {{ pregunta.preguntaDescription }}</label>
+                      <br />
+                      <!-- Grupo de botones de radio -->
+                      <mat-radio-group [formControlName]="'pregunta_' + i + '_' + j" class="example-radio-group" aria-label="Select an option">
+                        <mat-radio-button
+                          *ngFor="let opcion of [1, 2, 3, 4, 5]"
+                          [value]="opcion"
+                          class="example-radio-button"
+                        >
+                          {{ opcion === 1 ? 'Malo' : opcion === 2 ? 'Regular' : opcion === 3 ? 'Bueno' : opcion === 4 ? 'Muy bueno' : 'Excelente' }}
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
                 </div>
-
-
-            </Form>
-
-            <!-- Botton para enviar respuesta -->
-            <div class="boton-enviar-respuesta">
-                <div class="example-button-container">
-                    <button mat-fab extended color="primary">
-                    <mat-icon>checklist</mat-icon>
-                    Enviar respuesta
-                    </button>
-                </div>
+  
+                <mat-divider></mat-divider>
+              </mat-expansion-panel>
             </div>
-        </mat-card>
-
-        </div>
-
+  
+            <!-- Botón para enviar respuesta del cuestionario -->
+            <div class="boton-enviar-respuesta">
+              <div class="example-button-container">
+                <button mat-fab extended color="primary" >
+                  <mat-icon>checklist</mat-icon>
+                  Cuestionarios Activos
+                </button>
+              </div>
+            </div>
+  
+          </mat-card>
+        </form>
+      </div>
     </div>
-</div>
+  
+    <!-- Enviar cuestionario -->
+    <div class="boton-enviar-respuesta enviar">
+      <div class="example-button-container">
+        <button mat-fab extended (click)="onSubmit()">
+          <mat-icon>check_circle</mat-icon>
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+  
