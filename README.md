@@ -14,6 +14,7 @@
   * Java 17
   * Spring boot
   * Postman
+  * Loombok
   * Clean Code
   * Manejo de Errores
 
